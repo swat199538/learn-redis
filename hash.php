@@ -17,3 +17,9 @@ echo $redis->hSet('hash-key', 'sub-key3', 'value2').PHP_EOL;
 
 //获取散列包含的所以键值对，以数组的形式
 var_dump($redis->hGetAll('hash-key'));
+
+//删除指定hash的键值对
+echo $redis->hDel('hash-key', 'sub-key1').PHP_EOL;
+echo $redis->hDel('hash-key', 'sub-key1').PHP_EOL;
+
+var_dump($redis->hGetAll('hash-key'));
